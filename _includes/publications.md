@@ -16,7 +16,7 @@ nav: true
 
 </div>
  -->
- <div class="post">
+<!--  <div class="post">
 
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
@@ -27,4 +27,4 @@ nav: true
     {{ content }}
   </article>
 
-</div>
+</div> -->
