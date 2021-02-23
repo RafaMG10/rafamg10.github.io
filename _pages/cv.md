@@ -12,9 +12,9 @@ redirect_from:
 
 Education
 ======
+* PhD University Paris-Saclay, France, 2017 
 * BSc University of Malaga, Spain, 2011
 * MSc University of Malaga, Spain, 2014
-* PhD University Paris-Saclay, France, 2017 
 
 Work experience
 ======

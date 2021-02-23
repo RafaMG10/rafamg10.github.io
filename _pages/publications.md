@@ -2,7 +2,7 @@
 layout: publi
 permalink: /publications/
 title: Publications
-description: I publish in highly competitive peer-reviewed conferences in the field of HCI (Most prestigious conferences like CHI, UIST, etc).
+description: I publish in highly competitive peer-reviewed conferences in the field of HCI (most prestigious conferences like CHI, UIST, etc).
 years: [2019, 2018, 2017, 2016, 1935]
 ---
 
