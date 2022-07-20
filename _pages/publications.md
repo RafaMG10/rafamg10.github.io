@@ -2,7 +2,7 @@
 layout: publi
 permalink: /publications/
 title: Publications
-description: I publish in highly competitive peer-reviewed conferences; SIGGRAPH, CHI, and UIST. In the field of HCI, SIGGRAPH, CHI, and UIST are the single most prestigious conferences, with lower acceptance rates and higher impact factors than any other venues. <span style="color:DarkSlateBlue">Click on the pictures to watch the videos.</span> 
+description: I publish in highly competitive peer-reviewed conferences; SIGGRAPH, CHI, and UIST. In the field of HCI, SIGGRAPH, CHI, and UIST are the single most prestigious conferences, with lower acceptance rates and higher impact factors than any other venues. <span b style="color:DarkSlateBlue">Click on the pictures to watch the videos.</span> </b>
 years: [2019, 2018, 2017, 2016, 1935]
 ---
 
