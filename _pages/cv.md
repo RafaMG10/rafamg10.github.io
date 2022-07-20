@@ -20,7 +20,8 @@ Work experience
 ======
 * 2019 - : Haptic Research Engineer 
   * Ultraleap Ltd
-  * Managing: Levitate project
+  * Managing: Levitate project (FET Horizon 2020)
+  * TouchLess project (FET Horizon 2020)
 
 * 2017 - 2019: Postdoc 
   * University of Sussex
