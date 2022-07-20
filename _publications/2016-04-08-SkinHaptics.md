@@ -7,4 +7,6 @@ date: 2016-04-08
 venue: '2016 IEEE Haptics Symposium (HAPTICS)'
 paperurl: 'http://academicpages.github.io/files/paper3.pdf'
 citation: 'Daniel Spelmezan, Rafael Morales González, Sriram Subramanian'
+video: "https://www.youtube.com/watch?v=DR4LBFKv5_Y"
+thumbnail: /assets/img/SkinHaptics_t.png
 ---
