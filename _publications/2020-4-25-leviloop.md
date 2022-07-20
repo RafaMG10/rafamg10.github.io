@@ -7,9 +7,7 @@ date: 2020-4-25
 venue: 'Extended Abstracts of the 2020 CHI Conference on Human Factors in Computing Systems'
 paperurl: 'http://academicpages.github.io/files/paper2.pdf'
 citation: 'Rafael Morales González, Euan Freeman, Orestis Georgiou'
+thumbnail: /assets/img/leviloop_t.png
+video: "https://www.youtube.com/watch?v=rUGprsciur0"
+
 ---
-This paper is about the number 2. The number 3 is left for future work.
-
-[Download paper here](http://academicpages.github.io/files/paper2.pdf)
-
-Recommended citation: Your Name, You. (2010). "Paper Title Number 2." <i>Journal 1</i>. 1(2).
