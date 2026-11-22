@@ -111,6 +111,201 @@ p{line-height:1.72;margin-top:0}h1,h2,h3{font-family:Manrope,Arial,sans-serif;le
     height: 170px;
   }
 }
+.story-section{
+  background:#fff;
+}
+
+.story-intro{
+  max-width:860px;
+  font-size:18px;
+  line-height:1.75;
+  color:var(--muted);
+  margin:0 0 54px;
+}
+
+.story-timeline{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  gap:34px;
+}
+
+.story-timeline::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  bottom:0;
+  width:2px;
+  background:linear-gradient(180deg,#cfe0eb 0%,#8fb4cb 100%);
+  transform:translateX(-50%);
+}
+
+.story-step{
+  position:relative;
+  display:grid;
+  grid-template-columns:1fr 60px 1fr;
+  gap:30px;
+  align-items:center;
+}
+
+.story-step.reverse .story-copy{
+  grid-column:3;
+}
+
+.story-step.reverse .story-media{
+  grid-column:1;
+  grid-row:1;
+}
+
+.story-node{
+  grid-column:2;
+  justify-self:center;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:var(--blue);
+  border:4px solid #fff;
+  box-shadow:0 0 0 2px #bfd4e3;
+  z-index:2;
+}
+
+.story-copy{
+  background:#fff;
+  border:1px solid var(--rule);
+  border-radius:20px;
+  padding:28px 28px 24px;
+  box-shadow:0 18px 40px rgba(31,58,84,.06);
+}
+
+.story-date{
+  display:inline-block;
+  margin-bottom:12px;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--blue);
+}
+
+.story-copy h3{
+  margin:0 0 14px;
+  font-size:28px;
+  line-height:1.15;
+  letter-spacing:-.04em;
+}
+
+.story-copy p{
+  margin:0 0 16px;
+  color:var(--muted);
+  line-height:1.7;
+}
+
+.story-highlights{
+  margin:0;
+  padding-left:18px;
+  color:#4c6578;
+}
+
+.story-highlights li{
+  margin:0 0 10px;
+  line-height:1.6;
+}
+
+.story-media{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.story-photo{
+  width:100%;
+  max-width:420px;
+  aspect-ratio:4/3;
+  border-radius:20px;
+  border:1px solid var(--rule);
+  background:linear-gradient(145deg,#eef6fb,#dbeaf4 55%,#c7deec);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#56788f;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  box-shadow:0 18px 40px rgba(31,58,84,.06);
+}
+
+.story-cta{
+  margin-top:70px;
+  padding:34px;
+  border-radius:24px;
+  border:1px solid var(--rule);
+  background:#f7fbfd;
+  box-shadow:0 18px 40px rgba(31,58,84,.05);
+}
+
+.story-cta h3{
+  margin:12px 0 14px;
+  font-size:clamp(30px,4vw,48px);
+  letter-spacing:-.05em;
+}
+
+.story-cta p{
+  max-width:760px;
+  font-size:17px;
+  color:var(--muted);
+  line-height:1.75;
+}
+
+@media (max-width: 980px){
+  .story-timeline::before{
+    left:18px;
+    transform:none;
+  }
+
+  .story-step,
+  .story-step.reverse{
+    grid-template-columns:36px 1fr;
+    gap:18px;
+    align-items:start;
+  }
+
+  .story-node{
+    grid-column:1;
+    margin-top:18px;
+  }
+
+  .story-copy,
+  .story-step.reverse .story-copy{
+    grid-column:2;
+  }
+
+  .story-media,
+  .story-step.reverse .story-media{
+    grid-column:2;
+    grid-row:auto;
+    margin-top:-4px;
+  }
+
+  .story-photo{
+    max-width:none;
+  }
+}
+
+@media (max-width: 640px){
+  .story-copy{
+    padding:22px 20px 18px;
+  }
+
+  .story-copy h3{
+    font-size:24px;
+  }
+
+  .story-cta{
+    padding:24px 20px;
+  }
+}
+  
 </style>
 </head>
 <body>
@@ -165,7 +360,153 @@ p{line-height:1.72;margin-top:0}h1,h2,h3{font-family:Manrope,Arial,sans-serif;le
       <a class="button" href="mailto:RafaelMoralesG@gmail.com?subject=Advisory%20and%20Consulting%20Inquiry">Discuss a collaboration ↗</a>
     </div>
   </section>
-  <section class="section container" id="journey"><div class="section-head"><div class="eyebrow">04 / Background</div><h2>A path across research and industry.</h2></div><div class="timeline"><div class="timeline-item"><div class="timeline-year">2023 – 2026</div><div><h3>IDENER · R&amp;D Leadership</h3><p>European collaborative R&amp;D projects, proposal development, team coordination and innovation strategy.</p></div></div><div class="timeline-item"><div class="timeline-year">Prior experience</div><div><h3>Ultraleap · Principal Investigator in acoustic devices</h3><p>Applied research in novel interaction technology and mid-air haptics.</p></div></div><div class="timeline-item"><div class="timeline-year">Prior experience</div><div><h3>University of Sussex · Postdoctoral Research</h3><p>Acoustic levitation, volumetric displays and contactless interaction.</p></div></div><div class="timeline-item"><div class="timeline-year">PhD</div><div><h3>Université Paris-Saclay · Computer Science</h3><p>Human–computer interaction and tangible interfaces.</p></div></div></div></section>
+  
+  <section class="section story-section" id="story">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">04 / Who I Am</div>
+      <h2>From research to innovation leadership.</h2>
+    </div>
+
+    <p class="story-intro">
+      I started with a strong curiosity for how people interact with technology.
+      Over time, that curiosity became research, then engineering, and later
+      R&amp;D leadership. Today, my work connects scientific thinking, applied
+      technology, European innovation and strategic decision-making.
+    </p>
+
+    <div class="story-timeline">
+
+      <article class="story-step">
+        <div class="story-copy">
+          <span class="story-date">Where scientific curiosity became research.</span>
+          <!-- <h3>Where scientific curiosity became research.</h3> -->
+          <p>
+            My PhD in Computer Science focused on human–computer interaction and
+            developing novel interaction techniques for multi-touch surfaces using passive, 
+            low-cost tangible objects. I developed TouchTokens, a system that recognizes objects through users’ 
+            finger configurations with over 95% accuracy, and extended it to detect bending, squeezing, 
+            and object placement through subtle finger movements. 
+            I also created TouchTokenBuilder and TouchTokenTracker, tools that simplify the design and tracking
+            of custom tangible interfaces.
+          </p>
+          <ul class="story-highlights">
+            <li>Built a strong foundation in HCI and interactive systems.</li>
+            <li>Developed a research-driven approach to technology design.</li>
+            <li>Started shaping the scientific mindset behind my later work.</li>
+          </ul>
+        </div>
+        <div class="story-node" aria-hidden="true"></div>
+        <div class="story-media">
+          <div class="story-photo">PHOTO 01</div>
+        </div>
+      </article>
+
+      <article class="story-step reverse">
+        <div class="story-copy">
+          <span class="story-date">Making the invisible tangible.</span>
+          <!-- <h3>Making the invisible tangible.</h3> -->
+          <p>
+            I worked on acoustic levitation,
+            volumetric displays and contactless interaction technologies, turning
+            advanced scientific concepts into experimental systems and demonstrators. 
+          </p>
+          <ul class="story-highlights">
+            <li>Worked on levitating matter and volumetric display systems.</li>
+            <li>Developed experimental platforms for interactive research.</li>
+            <li>Brought together engineering, prototyping and scientific exploration.</li>
+          </ul>
+        </div>
+        <div class="story-node" aria-hidden="true"></div>
+        <div class="story-media">
+          <div class="story-photo">PHOTO 02</div>
+        </div>
+      </article>
+
+      <article class="story-step">
+        <div class="story-copy">
+          <span class="story-date">Turning ambitious ideas into working technology</span>
+          <!-- <h3>Turning ambitious ideas into working technology.</h3> -->
+          <p>
+            I contributed both as a principal investigator in acoustic
+            devices and as a senior haptic engineer, working on mid-air haptics,
+            ultrasonic interfaces, contactless interaction and emerging device concepts. I have developed an open-hardware phased-array system that generates airborne ultrasonic amplitude
+            patterns. LeviProps animates levitated fabric structures with holographic acoustic tweezers, 
+            while LeviPrint uses acoustic trapping to fabricate elongated parts. 
+          </p>
+          <ul class="story-highlights">
+            <li>Developed novel interaction technologies and prototypes.</li>
+            <li>Worked across acoustic levitation, mid-air haptics and device innovation.</li>
+            <li>Bridged scientific ideas with real technological applications.</li>
+          </ul>
+        </div>
+        <div class="story-node" aria-hidden="true"></div>
+        <div class="story-media">
+          <div class="story-photo">PHOTO 03</div>
+        </div>
+      </article>
+
+      <article class="story-step reverse">
+        <div class="story-copy">
+          <span class="story-date">Scaling innovation through people, funding and partnerships.</span>
+          <!-- <h3>Scaling innovation through people, funding and partnerships.</h3> -->
+          <p>
+            My focus expanded beyond technology development into European
+            collaborative R&amp;D, proposal writing, team coordination and innovation
+            strategy. This stage marked a clear shift from research execution to
+            innovation leadership.
+          </p>
+          <ul class="story-highlights">
+            <li>Contributed to winning projects such as SENSORAMA and DATA4CIRC.</li>
+            <li>Helped shape proposals, consortia, budgets and technical work plans.</li>
+            <li>Led and coordinated multidisciplinary R&amp;D activities.</li>
+          </ul>
+        </div>
+        <div class="story-node" aria-hidden="true"></div>
+        <div class="story-media">
+          <div class="story-photo">PHOTO 04</div>
+        </div>
+      </article>
+
+      <article class="story-step">
+        <div class="story-copy">
+          <span class="story-date">The next chapter: connecting research, business and strategy.</span>
+          <!-- <h3>The next chapter: connecting research, business and strategy.</h3> -->
+          <p>
+            My Executive MBA is helping me complement my scientific and technological
+            background with a broader business perspective, strengthening the way I
+            approach innovation, leadership and long-term impact.
+          </p>
+          <ul class="story-highlights">
+            <li>Expanding from technical leadership into business strategy.</li>
+            <li>Strengthening decision-making, management and innovation thinking.</li>
+            <li>Preparing for larger leadership and advisory responsibilities.</li>
+          </ul>
+        </div>
+        <div class="story-node" aria-hidden="true"></div>
+        <div class="story-media">
+          <div class="story-photo">PHOTO 05</div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="story-cta">
+      <div class="eyebrow">05 / Are you my next challenge?</div>
+      <h3>What can I do for you?</h3>
+      <p>
+        Whether you are shaping an R&amp;D strategy, building a consortium,
+        preparing a European proposal, or developing an ambitious technology,
+        I would be glad to hear what you are working on.
+      </p>
+      <div class="button-row">
+        <a class="button" href="mailto:RafaelMoralesG@gmail.com?subject=Let's%20talk">Let’s talk ↗</a>
+        <a class="button secondary" href="/cv/">Explore my CV</a>
+      </div>
+    </div>
+  </div>
+</section>
+  
   <section class="section container"><div class="section-head"><div class="eyebrow">05 / Research</div><h2>Curiosity is where it all began.</h2></div><div class="section-head" style="margin-bottom:0"><div></div><div class="section-copy"><p>My research has appeared in leading venues including CHI, UIST and SIGGRAPH, covering tangible interactions, contactless interfaces, ultrasonic haptics and acoustic manipulation.</p><p>Selected projects and publications include LeviPrint, UltraPower, LeviProps, TouchTokens and SkinHaptics.</p><a class="button" href="https://rafamg10.github.io/publications/">Browse publications ↗</a></div></div></section>
   <section id="contact" class="contact-section"><div class="container"><div class="eyebrow">06 / Connect</div><h2>Let's build what comes next.</h2><p>Interested in research collaboration, R&amp;D leadership, European projects or emerging technology? I'd be glad to connect.</p><div class="button-row"><a class="button" href="mailto:RafaelMoralesG@gmail.com?subject=Website%20Enquiry">Get in touch ↗</a><a class="button secondary" href="https://github.com/rafamg10" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></section>
 </main>
