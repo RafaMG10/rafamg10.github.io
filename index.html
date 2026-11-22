@@ -111,6 +111,241 @@ p{line-height:1.72;margin-top:0}h1,h2,h3{font-family:Manrope,Arial,sans-serif;le
     height: 170px;
   }
 }
+.story-section{
+  background:#fff;
+}
+
+.story-intro{
+  max-width:860px;
+  font-size:18px;
+  line-height:1.75;
+  color:var(--muted);
+  margin:0 0 54px;
+}
+
+.story-timeline{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  gap:34px;
+}
+
+.story-timeline::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  bottom:0;
+  width:2px;
+  background:linear-gradient(180deg,#cfe0eb 0%,#8fb4cb 100%);
+  transform:translateX(-50%);
+}
+
+.story-step{
+  position:relative;
+  display:grid;
+  grid-template-columns:1fr 60px 1fr;
+  gap:30px;
+  align-items:center;
+}
+
+.story-step.reverse .story-copy{
+  grid-column:3;
+}
+
+.story-step.reverse .story-media{
+  grid-column:1;
+  grid-row:1;
+}
+
+.story-node{
+  grid-column:2;
+  justify-self:center;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:var(--blue);
+  border:4px solid #fff;
+  box-shadow:0 0 0 2px #bfd4e3;
+  z-index:2;
+}
+
+.story-copy{
+  background:#fff;
+  border:1px solid var(--rule);
+  border-radius:20px;
+  padding:28px 28px 24px;
+  box-shadow:0 18px 40px rgba(31,58,84,.06);
+}
+
+.story-date{
+  display:inline-block;
+  margin-bottom:12px;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--blue);
+}
+
+.story-copy h3{
+  margin:0 0 14px;
+  font-size:28px;
+  line-height:1.15;
+  letter-spacing:-.04em;
+}
+
+.story-copy p{
+  margin:0 0 16px;
+  color:var(--muted);
+  line-height:1.7;
+}
+
+.story-highlights{
+  margin:0;
+  padding-left:18px;
+  color:#4c6578;
+}
+
+.story-highlights li{
+  margin:0 0 10px;
+  line-height:1.6;
+}
+
+.story-media{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.story-photo{
+  width:100%;
+  max-width:420px;
+  aspect-ratio:4/3;
+  border-radius:20px;
+  border:1px solid var(--rule);
+  background:linear-gradient(145deg,#eef6fb,#dbeaf4 55%,#c7deec);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#56788f;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  box-shadow:0 18px 40px rgba(31,58,84,.06);
+}
+
+.story-cta{
+  margin-top:70px;
+  padding:34px;
+  border-radius:24px;
+  border:1px solid var(--rule);
+  background:#f7fbfd;
+  box-shadow:0 18px 40px rgba(31,58,84,.05);
+}
+
+.story-cta h3{
+  margin:12px 0 14px;
+  font-size:clamp(30px,4vw,48px);
+  letter-spacing:-.05em;
+}
+
+.story-cta p{
+  max-width:760px;
+  font-size:17px;
+  color:var(--muted);
+  line-height:1.75;
+}
+
+@media (max-width: 980px){
+  .story-timeline::before{
+    left:18px;
+    transform:none;
+  }
+
+  .story-step,
+  .story-step.reverse{
+    grid-template-columns:36px 1fr;
+    gap:18px;
+    align-items:start;
+  }
+
+  .story-node{
+    grid-column:1;
+    margin-top:18px;
+  }
+
+  .story-copy,
+  .story-step.reverse .story-copy{
+    grid-column:2;
+  }
+
+  .story-media,
+  .story-step.reverse .story-media{
+    grid-column:2;
+    grid-row:auto;
+    margin-top:-4px;
+  }
+
+  .story-photo{
+    max-width:none;
+  }
+}
+
+@media (max-width: 640px){
+  .story-copy{
+    padding:22px 20px 18px;
+  }
+
+  .story-copy h3{
+    font-size:24px;
+  }
+
+  .story-cta{
+    padding:24px 20px;
+  }
+}
+
+/* Compact YouTube link inside the PhD timeline card */
+.story-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+.story-video-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #356f99;
+  color: #fff !important;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: background .2s ease, transform .2s ease;
+}
+.story-video-button:hover {
+  background: #245679;
+  color: #fff !important;
+  transform: translateY(-2px);
+}
+.story-date-with-logo{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+}
+
+.story-date-logo{
+  height:22px;
+  width:auto;
+  display:block;
+  object-fit:contain;
+  border-radius:4px;
+}
 </style>
 </head>
 <body>
@@ -119,7 +354,7 @@ p{line-height:1.72;margin-top:0}h1,h2,h3{font-family:Manrope,Arial,sans-serif;le
     <nav class="nav" aria-label="Main navigation">
       <a class="wordmark" href="#top">RAFAEL MORALES, PhD + MBA<span style="color:#d8edf9">.</span></a>
     <div class="navlinks">
-  <a href="#about">About</a>
+  <a href="#story">Who am I?</a>
   <a href="#expertise">Expertise</a>
   <a href="#projects">Projects</a>
   <a href="#advisory">Advisory</a>
@@ -143,7 +378,163 @@ p{line-height:1.72;margin-top:0}h1,h2,h3{font-family:Manrope,Arial,sans-serif;le
   <div class="container quickfacts">
     <div class="metrics"><div class="metrics-grid"><div class="metric"><strong>€18M+</strong><span>European R&D funding secured</span></div><div class="metric"><strong>9+ years</strong><span>International research and innovation experience</span></div><div class="metric"><strong>PhD · EMBA</strong><span>Computer Science · Executive MBA in progress</span></div></div></div>
   </div>
-  <section id="about" class="section container"><div class="section-head"><div class="eyebrow">01 / Biography</div><h2>From the laboratory to innovation leadership.</h2></div><div class="section-head" style="margin-bottom:0"><div></div><div class="section-copy"><p>I am a computer scientist and R&amp;D leader with a research background in human–computer interaction, ultrasound-based technologies and novel interfaces. My career spans academic research, experimental engineering and the development of collaborative European innovation projects.</p><p>After conducting research in France and the UK, including work at the University of Sussex and Ultraleap, I moved into leading research teams and complex European funding initiatives. I bring scientific depth, hands-on technical expertise and an increasingly strategic view of how innovation creates value.</p><p>I am currently pursuing an Executive MBA at EOI Sevilla (2026–2027), complementing my PhD with a focus on leadership, business and innovation strategy.</p><a class="text-link" href="https://rafamg10.github.io/cv/">Explore my professional background ↗</a></div></div></section>
+  <section class="section story-section" id="story">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">01 / Who I Am</div>
+      <h2>From research to innovation leadership.</h2>
+    </div>
+
+    <p class="story-intro">
+      I started with a strong curiosity for how people interact with technology.
+      Over time, that curiosity became research, then engineering, and later
+      R&amp;D leadership. Today, my work connects scientific thinking, applied
+      technology, European innovation and strategic decision-making.
+    </p>
+
+    <div class="story-timeline">
+
+      <article class="story-step">
+        <div class="story-copy">
+          <span class="story-date story-date-with-logo">
+            <img src="images/Logo_Paris-Saclay.svg" alt="PS logo" class="story-date-logo">
+            <span>Where scientific curiosity became research.</span>
+          </span>
+          <!-- <h3>Where scientific curiosity became research.</h3> -->
+          <p>
+            My PhD in Computer Science focused on human–computer interaction and
+            developing novel interaction techniques for multi-touch surfaces using passive, 
+            low-cost tangible objects. I developed TouchTokens, a system that recognizes objects through users’ 
+            finger configurations with over 95% accuracy, and extended it to detect bending, squeezing, 
+            and object placement through subtle finger movements. 
+            I also created TouchTokenBuilder and TouchTokenTracker, tools that simplify the design and tracking
+            of custom tangible interfaces.
+          </p>
+          <ul class="story-highlights">
+            <li>Built a strong foundation in HCI and interactive systems.</li>
+            <li>Developed a research-driven approach to technology design.</li>
+            <li>Started shaping the scientific mindset behind my later work.</li>
+          </ul>
+          <div class="story-actions">
+            <a class="story-video-button"
+               href="https://www.youtube.com/watch?v=-ePHKifLYCY"
+               target="_blank"
+               rel="noopener noreferrer">
+              Watch video ↗
+            </a>
+          </div>
+        </div>
+        <div class="story-node" aria-hidden="true"></div>
+        <div class="story-media"></div>
+      </article>
+
+      <article class="story-step reverse">
+        <div class="story-copy">
+          <span class="story-date story-date-with-logo">
+            <img src="images/University_of_Sussex_Logo.svg" alt="PSSusex logo" class="story-date-logo">
+            <span>Making the invisible tangible.</span>
+          </span>
+          <!-- <h3>Making the invisible tangible.</h3> -->
+          <p>
+            I worked on acoustic levitation,
+            volumetric displays and contactless interaction technologies, turning
+            advanced scientific concepts into experimental systems and demonstrators. 
+          </p>
+          <ul class="story-highlights">
+            <li>Worked on levitating matter and volumetric display systems.</li>
+            <li>Developed experimental platforms for interactive research.</li>
+            <li>Brought together engineering, prototyping and scientific exploration.</li>
+          </ul>
+        <div class="story-actions">
+            <a class="story-video-button"
+               href="https://www.youtube.com/watch?v=-ePHKifLYCY"
+               target="_blank"
+               rel="noopener noreferrer">
+              Watch video ↗
+            </a>
+          </div>
+          </div>
+        <div class="story-node" aria-hidden="true"></div>
+        <div class="story-media"></div>
+      </article>
+
+      <article class="story-step">
+        <div class="story-copy">
+          <span class="story-date story-date-with-logo">
+            <img src="images/ultraleap-logo.png" alt="Ultraleap logo" class="story-date-logo">
+            <span>Turning ambitious ideas into working technology.</span>
+          </span>
+          <!-- <h3>Turning ambitious ideas into working technology.</h3> -->
+          <p>
+            I contributed both as a principal investigator in acoustic
+            devices and as a senior haptic engineer, working on mid-air haptics,
+            ultrasonic interfaces, contactless interaction and emerging device concepts. I have developed an open-hardware phased-array system that generates airborne ultrasonic amplitude
+            patterns. LeviProps animates levitated fabric structures with holographic acoustic tweezers, 
+            while LeviPrint uses acoustic trapping to fabricate elongated parts. 
+          </p>
+          <ul class="story-highlights">
+            <li>Developed novel interaction technologies and prototypes.</li>
+            <li>Worked across acoustic levitation, mid-air haptics and device innovation.</li>
+            <li>Bridged scientific ideas with real technological applications.</li>
+          </ul>
+        <div class="story-actions">
+            <a class="story-video-button"
+               href="https://www.youtube.com/watch?v=9jtFNrxohGU"
+               target="_blank"
+               rel="noopener noreferrer">
+              Watch video ↗
+            </a>
+          </div>
+          </div>
+        <div class="story-node" aria-hidden="true"></div>
+        <div class="story-media"></div>
+      </article>
+
+      <article class="story-step reverse">
+        <div class="story-copy">
+          <span class="story-date story-date-with-logo">
+            <img src="images/idener_logo.png" alt="PS logo" class="story-date-logo">
+            <span>Scaling innovation through people, funding and partnerships.</span>
+          </span>
+          <!-- <h3>Scaling innovation through people, funding and partnerships.</h3> -->
+          <p>
+            My focus expanded beyond technology development into European
+            collaborative R&amp;D, proposal writing, team coordination and innovation
+            strategy. This stage marked a clear shift from research execution to
+            innovation leadership.
+          </p>
+          <ul class="story-highlights">
+            <li>Contributed to winning projects.</li>
+            <li>Helped shape proposals, consortia, budgets and technical work plans.</li>
+            <li>Led and coordinated multidisciplinary R&amp;D activities.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="story-step">
+        <div class="story-copy">
+          <span class="story-date story-date-with-logo">
+            <img src="images/Logo_EOI_4.jpg" alt="EOI logo" class="story-date-logo">
+            <span>Connecting research, business and strategy.</span>
+          </span>
+          <!-- <h3>The next chapter: connecting research, business and strategy.</h3> -->
+          <p>
+            My Executive MBA is helping me complement my scientific and technological
+            background with a broader business perspective, strengthening the way I
+            approach innovation, leadership and long-term impact.
+          </p>
+          <ul class="story-highlights">
+            <li>Expanding from technical leadership into business strategy.</li>
+            <li>Strengthening decision-making, management and innovation thinking.</li>
+            <li>Preparing for larger leadership and advisory responsibilities.</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
   <section id="expertise" class="section container"><div class="section-head"><div class="eyebrow">02 / Expertise</div><h2>Connecting science, engineering and strategy.</h2></div><div class="cards"><article class="card"><div><span class="num">01</span><h3>R&amp;D Leadership</h3><p>Research strategy, multidisciplinary team leadership, technology roadmaps, technical coordination and innovation delivery.</p></div><span class="tag">People · Technology · Impact</span></article><article class="card"><div><span class="num">02</span><h3>European Funding</h3><p>Horizon Europe proposal development, consortium building, work-package coordination, project budgets and stakeholder collaboration.</p></div><span class="tag">Horizon Europe · Clusters 4 &amp; 5</span></article><article class="card"><div><span class="num">03</span><h3>Emerging Technologies</h3><p>Human–computer interaction, AI-enabled solutions, ultrasound haptics, acoustic levitation, XR, sensors and novel interfaces.</p></div><span class="tag">HCI · AI · Deep Tech</span></article></div></section>
   <section id="projects" class="section container"><div class="section-head"><div class="eyebrow">03 / Selected work</div><h2>Research with real-world ambition.</h2></div><div class="work-grid visual-work-grid">
 <article class="visual-work"><div class="project-media logo"><img src="data:image/webp;base64,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" alt="Official SENSORAMA project logo" loading="lazy" decoding="async"></div><div class="project-content"><span class="tag">European R&amp;D · Extended Reality</span><h3>SENSORAMA</h3><p>Multimodal XR training technologies combining visual, audio, haptic and adaptive feedback. Involved in winning the research proposal.</p><div class="project-link"><span class="text-link">Immersive technologies</span></div></div></article>
@@ -165,7 +556,9 @@ p{line-height:1.72;margin-top:0}h1,h2,h3{font-family:Manrope,Arial,sans-serif;le
       <a class="button" href="mailto:RafaelMoralesG@gmail.com?subject=Advisory%20and%20Consulting%20Inquiry">Discuss a collaboration ↗</a>
     </div>
   </section>
-  <section class="section container" id="journey"><div class="section-head"><div class="eyebrow">04 / Background</div><h2>A path across research and industry.</h2></div><div class="timeline"><div class="timeline-item"><div class="timeline-year">2023 – 2026</div><div><h3>IDENER · R&amp;D Leadership</h3><p>European collaborative R&amp;D projects, proposal development, team coordination and innovation strategy.</p></div></div><div class="timeline-item"><div class="timeline-year">Prior experience</div><div><h3>Ultraleap · Principal Investigator in acoustic devices</h3><p>Applied research in novel interaction technology and mid-air haptics.</p></div></div><div class="timeline-item"><div class="timeline-year">Prior experience</div><div><h3>University of Sussex · Postdoctoral Research</h3><p>Acoustic levitation, volumetric displays and contactless interaction.</p></div></div><div class="timeline-item"><div class="timeline-year">PhD</div><div><h3>Université Paris-Saclay · Computer Science</h3><p>Human–computer interaction and tangible interfaces.</p></div></div></div></section>
+  
+  
+  
   <section class="section container"><div class="section-head"><div class="eyebrow">05 / Research</div><h2>Curiosity is where it all began.</h2></div><div class="section-head" style="margin-bottom:0"><div></div><div class="section-copy"><p>My research has appeared in leading venues including CHI, UIST and SIGGRAPH, covering tangible interactions, contactless interfaces, ultrasonic haptics and acoustic manipulation.</p><p>Selected projects and publications include LeviPrint, UltraPower, LeviProps, TouchTokens and SkinHaptics.</p><a class="button" href="https://rafamg10.github.io/publications/">Browse publications ↗</a></div></div></section>
   <section id="contact" class="contact-section"><div class="container"><div class="eyebrow">06 / Connect</div><h2>Let's build what comes next.</h2><p>Interested in research collaboration, R&amp;D leadership, European projects or emerging technology? I'd be glad to connect.</p><div class="button-row"><a class="button" href="mailto:RafaelMoralesG@gmail.com?subject=Website%20Enquiry">Get in touch ↗</a><a class="button secondary" href="https://github.com/rafamg10" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></section>
 </main>
